@@ -1,0 +1,9 @@
+ecommerce:
+  application:
+    message: "Welcome to E-Commerce Microservices"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
