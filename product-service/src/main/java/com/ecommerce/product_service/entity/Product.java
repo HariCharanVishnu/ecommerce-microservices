@@ -30,6 +30,9 @@ public class Product {
     @Column(nullable = false)
     private boolean active = true;
 
+    @Column(length = 100)
+    private String brand;
+
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;
@@ -121,5 +124,12 @@ public class Product {
         this.updatedAt = updatedAt;
     }
 
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
 }
 

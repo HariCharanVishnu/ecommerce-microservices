@@ -21,6 +21,8 @@ public class ProductRequest {
     @NotBlank(message = "Category is required")
     private String category;
 
+    private String brand;
+
     // Generate getters and setters using Alt + Insert
 
     public String getSku() {
@@ -62,4 +64,13 @@ public class ProductRequest {
     public void setCategory(String category) {
         this.category = category;
     }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
 }

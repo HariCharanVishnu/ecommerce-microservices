@@ -13,6 +13,7 @@ public class ProductResponse {
     private BigDecimal price;
     private String category;
     private boolean active;
+    private String brand;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
@@ -88,5 +89,13 @@ public class ProductResponse {
 
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 }
