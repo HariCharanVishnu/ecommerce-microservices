@@ -1,0 +1,30 @@
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: ecommerce-postgres
+    environment:
+      POSTGRES_USER: ecommerce
+      POSTGRES_PASSWORD: ecommerce123
+      POSTGRES_DB: product_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres-parent:/var/lib/postgresql
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - ecommerce-network
+    restart: unless-stopped
+
+volumes:
+  postgres-parent:
+    external: true
+    name: ecommerce-postgres-data
+
+  postgres-data:
+    external: true
+    name: c2660646d16ec8184315403da586402d60ecce0e3b59fee609cbbcf036fbbc8a
+
+networks:
+  ecommerce-network:
+    external: true
